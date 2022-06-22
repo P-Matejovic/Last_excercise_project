@@ -50,7 +50,7 @@ let lechworth = {
 
 
 
-let currentPhoto = 5;
+let currentPhoto = 7;
 const imagesData = [Swamp, Canyon, bigbend, bigsur, everglades, florida, Grandpris, lechworth];
 
 if (currentPhoto === 0) {
