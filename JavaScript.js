@@ -1,7 +1,7 @@
 $("document").ready(function(){
 console.log("Java is working!");
 
-
+// proměnné objekty pro další využití
 let Swamp = {
     Image:"photo/Atchafalaya-Basin.webp",
     title: 'My different title',
@@ -20,7 +20,7 @@ let bigbend = {
 };
 
 let bigsur = {
-    Image:"photo/Atchafalaya-Basin.webp",
+    Image:"photo/Big-Sur.webp",
     title: 'My different title3',
     description: 'I hope you love America like me !'
 };
@@ -48,13 +48,40 @@ let lechworth = {
 };
 
 
-
-
-let currentPhoto = 7;
+let currentPhoto = 0;
 const imagesData = [Swamp, Canyon, bigbend, bigsur, everglades, florida, Grandpris, lechworth];
 
+
+// Lepší řešení pomocí funkce, která je prvně vytvořena a poté je následně spouštím s hodnotou currentPhoto !!!!,photoNumber je pouze proměnná, kterou nasledně zadám.
+
+function LoadData(photoNumber) {
+    $("#Image").attr("src", imagesData[photoNumber].Image);
+    $("#Headings").text(imagesData[photoNumber].title);
+    $("#description").text(imagesData[photoNumber].description);
+};
+
+LoadData(currentPhoto);
+//tlačítka na vytvoření přes Jquery
+$('#Next').click(() => {
+    if (currentPhoto < 7)
+    currentPhoto++;
+    else {currentPhoto = 0};
+LoadData(currentPhoto); //Nezapomenout pak vždy "Refreshnout celé načtení !", jinak je mi tohle clck uplně naprd !
+
+});
+
+$('#Previous').click(() => {
+    if (currentPhoto > 0)
+    currentPhoto--;
+    else {currentPhoto = 7};
+LoadData(currentPhoto);
+
+});
+
+/* //Takto to jde udělat zdlouhavě přes podmíky, ale je to zdlouhavé!
+
 if (currentPhoto === 0) {
-    $("#Image").attr("src", Swamp.Image);
+    $("#Image").attr("src", imagesData[currentPhoto].Image);
     $("#Headings").text(Swamp.title);
     $("#description").text(Swamp.description);}
 else if (currentPhoto === 1) {
@@ -88,4 +115,5 @@ else if (currentPhoto === 7) {
     $("#description").text(lechworth.description);
 }
 else {alert("we don´t have so many photos!")}
+*/
 });
