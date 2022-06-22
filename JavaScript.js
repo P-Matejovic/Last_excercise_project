@@ -62,7 +62,7 @@ function LoadData(photoNumber) {
 
 LoadData(currentPhoto);
 //tlačítka na vytvoření přes Jquery
-$('#Next').click(() => {
+$('.box3').click(() => {
     if (currentPhoto < 7)
     currentPhoto++;
     else {currentPhoto = 0};
@@ -70,7 +70,7 @@ LoadData(currentPhoto); //Nezapomenout pak vždy "Refreshnout celé načtení !"
 
 });
 
-$('#Previous').click(() => {
+$('.box1').click(() => {
     if (currentPhoto > 0)
     currentPhoto--;
     else {currentPhoto = 7};
