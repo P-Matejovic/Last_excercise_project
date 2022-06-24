@@ -84,6 +84,11 @@ imagesData.forEach(( element, index) => {
 
 });
 
+if ($(".thumbnail").click()) {
+    console.log("first clicked")
+}
+
+LoadData(currentPhoto);
 
 /* //Takto to jde udělat zdlouhavě přes podmíky, ale je to zdlouhavé!
 
