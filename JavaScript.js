@@ -78,6 +78,13 @@ LoadData(currentPhoto);
 
 });
 
+imagesData.forEach(( element, index) => {
+    $('.container_2').append(`<img src="${imagesData[index].Image}" class="thumbnail" data-index="${index}">
+    </img>`);
+
+});
+
+
 /* //Takto to jde udělat zdlouhavě přes podmíky, ale je to zdlouhavé!
 
 if (currentPhoto === 0) {
