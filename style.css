@@ -101,3 +101,28 @@
         
     }
 
+.comments {
+  position: absolute;
+  top: 94%;
+  /* border: 1px solid red; */
+  width: 80%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.comments p {
+  width: 80px;
+  height: 20px;
+  background-color: rgb(43, 43, 43);
+  color: aliceblue;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.container_2:hover .comments p {
+  visibility: visible;
+  opacity: 1;
+}
