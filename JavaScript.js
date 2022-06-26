@@ -79,14 +79,10 @@ LoadData(currentPhoto);
 });
 
 imagesData.forEach(( element, index) => {
-    $('.container_2').append(`<img src="${imagesData[index].Image}" class="thumbnail" data-index="${index}">
+    $('.container_2').append(`<img src="${imagesData[index].Image}" class="thumbnail" data-index="${index}" id="picture${index}">
     </img>`);
-
 });
 
-if ($(".thumbnail").click()) {
-    console.log("first clicked")
-}
 
 LoadData(currentPhoto);
 
