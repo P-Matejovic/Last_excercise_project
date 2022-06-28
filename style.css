@@ -119,10 +119,10 @@
   color: aliceblue;
   text-align: center;
   visibility: hidden;
-  opacity: 0;
-}
-
-.container_2:hover .comments p {
-  visibility: visible;
   opacity: 1;
 }
+
+/* .container_2:hover .comments p {
+  visibility: visible;
+  opacity: 1;
+} */

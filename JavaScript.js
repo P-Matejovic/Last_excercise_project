@@ -52,12 +52,49 @@ let currentPhoto = 0;
 const imagesData = [Swamp, Canyon, bigbend, bigsur, everglades, florida, Grandpris, lechworth];
 
 
+
 // Lepší řešení pomocí funkce, která je prvně vytvořena a poté je následně spouštím s hodnotou currentPhoto !!!!,photoNumber je pouze proměnná, kterou nasledně zadám.
 
 function LoadData(photoNumber) {
     $("#Image").attr("src", imagesData[photoNumber].Image);
     $("#Headings").text(imagesData[photoNumber].title);
     $("#description").text(imagesData[photoNumber].description);
+    
+    //zkoušení hover na obrázky s zobrazením komentu
+    //Ako máster přes loopy !
+    for (let i=0; i < imagesData.length; i++) {
+        $("#picture" + [i]).hover(function(){
+            $(".comment" + [i]).css("visibility", "visible")
+        }, function(){
+            $(".comment" + [i]).css("visibility", "hidden")
+        });
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /*          Jedna možnost
+    $("#picture0").hover(function(){
+        $(".comment0").css("visibility", "visible")
+    }, function(){
+        $(".comment0").css("visibility", "hidden")
+    });
+
+    $("#picture1").hover(function(){
+        $(".comment1").css("visibility", "visible")
+    }, function(){
+        $(".comment1").css("visibility", "hidden")
+    });
+
+    $("#picture2").hover(function(){
+        $(".comment2").css("visibility", "visible")
+    }, function(){
+        $(".comment2").css("visibility", "hidden")
+    });*/
 };
 
 LoadData(currentPhoto);
@@ -77,6 +114,10 @@ $('.box1').click(() => {
 LoadData(currentPhoto);
 
 });
+
+
+
+
 
 imagesData.forEach(( element, index) => {
     $('.container_2').append(`<img src="${imagesData[index].Image}" class="thumbnail" data-index="${index}" id="picture${index}">
