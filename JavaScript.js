@@ -89,7 +89,7 @@ function LoadData(photoNumber) {
         $(".comment2").css("visibility", "hidden")
     });*/
 };
-
+//vždy když vytvoříš funci, tak ji aktivuj s proměnou uvnitř !!!!
 LoadData(currentPhoto);
 //tlačítka na vytvoření přes Jquery
 $('.box3').click(() => {
