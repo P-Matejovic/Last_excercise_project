@@ -70,13 +70,6 @@ function LoadData(photoNumber) {
         });
     }
     
-    
-    
-    
-    
-    
-    
-    
     /*          Jedna možnost
     $("#picture0").hover(function(){
         $(".comment0").css("visibility", "visible")
